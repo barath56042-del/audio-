@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive 3D audio-reactive cube that jumps in sync with your voice and sounds. Built with React Three Fiber and Web Audio API." />
+    <meta name="keywords" content="3D, audio, reactive, cube, WebGL, React Three Fiber, Web Audio API" />
+    <meta name="author" content="Audio Cube Demo" />
+    <meta name="theme-color" content="#0a0a0f" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Audio Cube - Interactive 3D Sound Experience" />
+    <meta property="og:description" content="Watch a 3D cube react to your voice in real-time" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <title>Audio Cube - Interactive 3D Sound Experience</title>
+    
+    <style>
+      /* Critical CSS for fast initial load */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html, body, #root {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #0a0a0f;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      /* Loading state */
+      #root:empty::after {
+        content: 'Loading...';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #6366f1;
+        font-size: 1.5rem;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
