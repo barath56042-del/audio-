@@ -66,3 +66,5 @@ Audio Processing: Web Audio API (Native)
 Computer Vision: MediaPipe Hands
 
 State Management: React Hooks
+
+demo video:https://drive.google.com/file/d/1mtGtmIN8bBmcsoJD7DjnskyjgyRrXk49/view?usp=drivesdk
